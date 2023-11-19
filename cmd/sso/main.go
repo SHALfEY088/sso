@@ -1,8 +1,12 @@
 // `cmd/sso/main.go`
 package main
 
+import "github.com/SHALfEY088/sso/internal/config"
+
 func main() {
-	// TODO: инициализировать объект конфига
+	cfg := config.MustLoad()
+
+	// ...
 
 	// TODO: инициализировать логгер
 
