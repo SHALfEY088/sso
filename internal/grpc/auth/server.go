@@ -7,7 +7,7 @@ import (
 	"google.golang.org/grpc"
 
 	// Сгенерированный код
-	ssov1 "github.com/SHALfEY088/sso/protos/gen/go/sso"
+	ssov1 "github.com/SHALfEY088/protos/gen/go/sso"
 )
 
 type serverAPI struct {
