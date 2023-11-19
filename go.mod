@@ -4,6 +4,7 @@ go 1.21.1
 
 require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
+	github.com/SHALfEY088/protos v0.0.0-20231119182713-de0d5cc741f4 // indirect
 	github.com/ilyakaznacheev/cleanenv v1.5.0 // indirect
 	github.com/joho/godotenv v1.5.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
