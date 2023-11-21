@@ -11,7 +11,7 @@ import (
 
 type serverAPI struct {
 	ssov1.UnimplementedAuthServer // Хитрая штука, о ней ниже
-	//auth                          Auth
+	auth                          Auth
 }
 
 // Тот самый интерфейс, котрый мы передавали в grpcApp
@@ -27,10 +27,16 @@ type Auth interface {
 		email string,
 		password string,
 	) (userID int64, err error)
+	IsAdmin(ctx context.Context, userID int64) (bool, error)
+}
+
+type serverAPI struct {
+	ssov1.UnimplementedAuthServer
+	auth Auth
 }
 
 func Register(gRPC *grpc.Server) {
-	ssov1.RegisterAuthServer(gRPC, &serverAPI{})
+	ssov1.RegisterAuthServer(gRPC, &serverAPI{auth: Auth()})
 }
 
 func (s *serverAPI) Login(
