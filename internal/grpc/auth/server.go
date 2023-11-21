@@ -30,9 +30,9 @@ func (s *serverAPI) Register(
 	panic("implement me")
 }
 
-//func (s *serverAPI) IsAdmin(
-//	ctx context.Context,
-//	req *ssov1.IsAdminRequest,
-//) (*ssov1.IsAdminRequest, error) {
-//	panic("implement me")
-//}
+func (s *serverAPI) IsAdmin(
+	ctx context.Context,
+	req *ssov1.IsAdminRequest,
+) (*ssov1.IsAdminResponse, error) {
+	panic("implement me")
+}
