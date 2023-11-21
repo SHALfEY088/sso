@@ -3,8 +3,16 @@ package main
 
 import (
 	"github.com/SHALfEY088/sso/internal/config"
+	"github.com/SHALfEY088/sso/internal/lib/logger/handlers/slogpretty"
+	"github.com/SHALfEY088/sso/internal/lib/logger/sl"
 	"log/slog"
 	"os"
+)
+
+const (
+	envLocal = "local"
+	envDev   = "dev"
+	envProd  = "prod"
 )
 
 func main() {
@@ -12,7 +20,25 @@ func main() {
 
 	log := setupLogger(cfg.Env)
 
-	// ...
+	log.Info("starting application", slog.Any("config", cfg))
+	//log.Info("starting application",
+	//	slog.String("env", cfg.Env),
+	//	slog.Any("cfg", cfg),
+	//	slog.Int("port", cfg.GRPC.Port),
+	//)
+
+	log.Debug("debug message")
+
+	log.Error("error message")
+
+	log.Warn("warn message")
+
+	var err error
+
+	if err != nil {
+		//log.Error("error message", slog.String("error", err.Error()))
+		log.Error("error message", sl.Err(err))
+	}
 
 	// TODO: инициализировать логгер
 
@@ -26,9 +52,7 @@ func setupLogger(env string) *slog.Logger {
 
 	switch env {
 	case envLocal:
-		log = slog.New(
-			slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{Level: slog.LevelDebug}),
-		)
+		log = setupPrettySlog()
 	case envDev:
 		log = slog.New(
 			slog.NewJSONHandler(os.Stdout, &slog.HandlerOptions{Level: slog.LevelDebug}),
@@ -40,4 +64,16 @@ func setupLogger(env string) *slog.Logger {
 	}
 
 	return log
+}
+
+func setupPrettySlog() *slog.Logger {
+	opts := slogpretty.PrettyHandlerOptions{
+		SlogOpts: &slog.HandlerOptions{
+			Level: slog.LevelDebug,
+		},
+	}
+
+	handler := opts.NewPrettyHandler(os.Stdout)
+
+	return slog.New(handler)
 }
