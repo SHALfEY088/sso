@@ -11,7 +11,7 @@ import (
 
 type serverAPI struct {
 	ssov1.UnimplementedAuthServer // Хитрая штука, о ней ниже
-	auth                          Auth
+	//auth                          Auth
 }
 
 // Тот самый интерфейс, котрый мы передавали в grpcApp
