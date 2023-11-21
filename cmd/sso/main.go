@@ -2,6 +2,7 @@
 package main
 
 import (
+	"github.com/SHALfEY088/sso/internal/app"
 	"github.com/SHALfEY088/sso/internal/config"
 	"github.com/SHALfEY088/sso/internal/lib/logger/handlers/slogpretty"
 	"github.com/SHALfEY088/sso/internal/lib/logger/sl"
@@ -20,9 +21,9 @@ func main() {
 
 	log := setupLogger(cfg.Env)
 
-	//application := app.New(log, cfg.GRPC.Port, cfg.StoragePath, cfg.TokenTTL)
-	//
-	//application.GRPCSrv.MustRun()
+	application := app.New(log, cfg.GRPC.Port, cfg.StoragePath, cfg.TokenTTL)
+
+	application.GRPCSrv.MustRun()
 
 	log.Info("starting application", slog.Any("config", cfg))
 
@@ -31,8 +32,6 @@ func main() {
 	if err != nil {
 		log.Error("error message", sl.Err(err))
 	}
-
-	// TODO: инициализировать логгер
 
 	// TODO: инициализировать приложение (app)
 
