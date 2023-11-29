@@ -5,6 +5,7 @@ go 1.21.1
 require (
 	github.com/SHALfEY088/protos v0.0.0-20231121135626-f3ed67272ff3
 	github.com/fatih/color v1.16.0
+	github.com/golang-jwt/jwt/v5 v5.1.0
 	github.com/ilyakaznacheev/cleanenv v1.5.0
 	golang.org/x/crypto v0.16.0
 	golang.org/x/exp v0.0.0-20231110203233-9a3e6036ecaa
