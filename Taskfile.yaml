@@ -4,10 +4,16 @@
 version: "3"
 
 tasks:
-  default: # Если не указать конкретную команду, будут выполнены дефолтные
+  default: # Задача по умолчанию теперь ссылается на 'run-sso'
     cmds:
-      - task: migrate
-  migrate:  ## Команда для генерации
+      - task: run-sso
+
+  run-sso: # Новая задача для запуска программы
+    desc: "Run SSO service"
+    cmds:
+      - go run cmd/sso/main.go --config=./config/config_local.yaml
+
+  migrate:  ## Команда для миграции
     aliases: ## Алиасы команды, для простоты использования
       - mig
     desc: "Migrate sqlite"
