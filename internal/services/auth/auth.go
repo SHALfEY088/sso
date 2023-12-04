@@ -42,6 +42,7 @@ var (
 	ErrInvalidCredentials = errors.New("invalid credentials")
 	ErrInvalidAppId       = errors.New("invalid app id")
 	ErrUserExist          = errors.New("user already exist")
+	ErrUserNotFound       = errors.New("user not found")
 )
 
 // New(log, storage, storage, storage, time.Hour..)
