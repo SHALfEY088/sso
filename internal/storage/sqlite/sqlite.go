@@ -5,10 +5,10 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
-	"github.com/SHALfEY088/sso/internal/domain/models"
-	"github.com/SHALfEY088/sso/internal/storage"
 	"github.com/mattn/go-sqlite3"
 	_ "github.com/mattn/go-sqlite3"
+	"sso/internal/domain/models"
+	"sso/internal/storage"
 )
 
 type Storage struct {

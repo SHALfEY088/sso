@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/SHALfEY088/sso/internal/config"
+	"sso/internal/config"
 
 	ssov1 "github.com/SHALfEY088/protos/gen/go/sso"
 	"google.golang.org/grpc"

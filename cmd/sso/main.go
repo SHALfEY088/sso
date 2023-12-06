@@ -2,13 +2,13 @@
 package main
 
 import (
-	"github.com/SHALfEY088/sso/internal/app"
-	"github.com/SHALfEY088/sso/internal/config"
-	"github.com/SHALfEY088/sso/internal/lib/logger/handlers/slogpretty"
-	"github.com/SHALfEY088/sso/internal/lib/logger/sl"
 	"log/slog"
 	"os"
 	"os/signal"
+	"sso/internal/app"
+	"sso/internal/config"
+	"sso/internal/lib/logger/handlers/slogpretty"
+	"sso/internal/lib/logger/sl"
 	"syscall"
 )
 

@@ -5,10 +5,10 @@ import (
 	"context"
 	"errors"
 	ssov1 "github.com/SHALfEY088/protos/gen/go/sso"
-	"github.com/SHALfEY088/sso/internal/services/auth"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
+	"sso/internal/services/auth"
 )
 
 type Auth interface {

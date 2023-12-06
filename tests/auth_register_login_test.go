@@ -1,8 +1,8 @@
 package tests
 
 import (
-	"github.com/SHALfEY088/sso/tests/suite"
 	"github.com/brianvoe/gofakeit/v6"
+	"sso/tests/suite"
 	"testing"
 	"time"
 
