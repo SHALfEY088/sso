@@ -5,11 +5,11 @@ import (
 	"errors"
 	"fmt"
 	"golang.org/x/crypto/bcrypt"
+	"grpc-service-ref/internal/domain/models"
+	"grpc-service-ref/internal/lib/jwt"
+	"grpc-service-ref/internal/lib/logger/sl"
+	"grpc-service-ref/internal/storage"
 	"log/slog"
-	"sso/internal/domain/models"
-	"sso/internal/lib/jwt"
-	"sso/internal/lib/logger/sl"
-	"sso/internal/storage"
 	"time"
 )
 

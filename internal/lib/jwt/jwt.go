@@ -2,7 +2,7 @@ package jwt
 
 import (
 	"github.com/golang-jwt/jwt/v5"
-	"sso/internal/domain/models"
+	"grpc-service-ref/internal/domain/models"
 	"time"
 )
 

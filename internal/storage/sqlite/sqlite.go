@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"github.com/mattn/go-sqlite3"
 	_ "github.com/mattn/go-sqlite3"
-	"sso/internal/domain/models"
-	"sso/internal/storage"
+	"grpc-service-ref/internal/domain/models"
+	"grpc-service-ref/internal/storage"
 )
 
 type Storage struct {

@@ -8,7 +8,7 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
-	"sso/internal/services/auth"
+	"grpc-service-ref/internal/services/auth"
 )
 
 type Auth interface {

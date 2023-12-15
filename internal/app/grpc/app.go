@@ -3,9 +3,9 @@ package grpcapp
 import (
 	"fmt"
 	"google.golang.org/grpc"
+	authgrpc "grpc-service-ref/internal/grpc/auth"
 	"log/slog"
 	"net"
-	authgrpc "sso/internal/grpc/auth"
 )
 
 type App struct {

@@ -2,13 +2,13 @@
 package main
 
 import (
+	"grpc-service-ref/internal/app"
+	"grpc-service-ref/internal/config"
+	"grpc-service-ref/internal/lib/logger/handlers/slogpretty"
+	"grpc-service-ref/internal/lib/logger/sl"
 	"log/slog"
 	"os"
 	"os/signal"
-	"sso/internal/app"
-	"sso/internal/config"
-	"sso/internal/lib/logger/handlers/slogpretty"
-	"sso/internal/lib/logger/sl"
 	"syscall"
 )
 

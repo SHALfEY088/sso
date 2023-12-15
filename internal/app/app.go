@@ -1,10 +1,10 @@
 package app
 
 import (
+	grpcapp "grpc-service-ref/internal/app/grpc"
+	"grpc-service-ref/internal/services/auth"
+	"grpc-service-ref/internal/storage/sqlite"
 	"log/slog"
-	grpcapp "sso/internal/app/grpc"
-	"sso/internal/services/auth"
-	"sso/internal/storage/sqlite"
 	"time"
 )
 

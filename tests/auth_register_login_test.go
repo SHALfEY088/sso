@@ -2,7 +2,7 @@ package tests
 
 import (
 	"github.com/brianvoe/gofakeit/v6"
-	"sso/tests/suite"
+	"grpc-service-ref/tests/suite"
 	"testing"
 	"time"
 
