@@ -19,7 +19,7 @@
 
 # Go workspace file
 go.work
-.idea
-.vscode
+.idea/
+.vscode/
 config/local.yaml
 /storage/
